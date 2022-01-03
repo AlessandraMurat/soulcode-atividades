@@ -1,0 +1,39 @@
+
+
+* {
+    font-family: 'Poppins', sans-serif ;
+}
+
+.custom-section {
+    width: inherit;
+    padding: 40px 0; 
+}
+
+#sobre {
+    background-color: #f0f4ef;
+}
+
+#finalidade {
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .criacao {
+        margin-top: 48px;
+    }
+
+    .testeUnit {
+        margin-top: 48px;
+    }
+    
+    
+}

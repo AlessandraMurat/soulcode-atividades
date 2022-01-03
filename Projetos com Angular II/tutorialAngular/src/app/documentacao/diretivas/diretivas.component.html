@@ -1,0 +1,197 @@
+
+
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">O que são diretivas ?</h2>
+            <p class="pl-4">
+                São classes que inclui comportamentos adicional aos elementos da nossa aplicação. São utilizadas em listas, estilos, formulários entre outros.
+            </p>
+           
+            <p class="pl-4">
+               Existem três tipos de diretivas, sendo elas:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    Diretivas integradas: Esse é o tipo mais comum;
+
+                <li>
+                    Diretivas de atributo: Que alteram comportamento ou aparência de um elemento ou componente;
+                </li>
+
+                <li>
+                    Diretivas estruturais: Que alteram o DOM adicionando ou removendo elementos;
+
+                </li>  
+            </ul>
+            
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Diretivas de atributo</h2>
+            <p class="pl-4">
+               São responsáveis por alterar o comportamento de um elemento, propriedade, componentes, atributos do HTML.
+            </p>
+           
+            <p class="pl-4">
+               As mais comuns que são definidas pelo RouterModule e FormsModule, são:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    <b>NgModel: </b> Adiciona vinculação de dados a um elemento de formulário HTML;
+
+                <li>
+                    <b>NgClass:</b> Remove ou adicona um conjunto de classes CSS;
+                </li>
+
+                <li>
+                    <b>NgStyle:</b> Adiciona ou remove um conjunto de estilos HTML.
+
+                </li>  
+            </ul>
+            
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Diretivas estruturais</h2>
+            <p class="pl-4">
+               são usadas  para moldar ou remoldar a estrutura do DOM , geralmente adiciona, remove e manioula os elementos do host aos quais estão anexados
+            </p>
+           
+            <p class="pl-4">
+               As diretivas estruturais mais comum são:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    <b>NgFor: </b> Repetir um nó para cada item de um array;
+
+                <li>
+                    <b>NgIf:</b> Condicional que cria ou discarta uma subvisualização de um modelo;;
+                </li>
+
+                <li>
+                    <b>NgSwitch:</b> AConjunto de diretivas que alternam a visualização.
+
+                </li>  
+            </ul>
+            
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Listando elementos com NgFor</h2>
+            <p class="pl-4 text-justify">Para usar um pipe usamos o operador de pipe (|) em uma expressão de um modelo. A seguir iremos usar um modelo com o nome de caixaAlta que receberá uma string no arquivo <b>teste.component.ts</b></p>
+            <div class="col-lg-7 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo"> import {{ '{' }} Component{{ '}' }} from '@angular/core';</p>
+  
+
+                    <p class="text-codigo"> @NgComponent({{ '{' }}</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; selector:['ngfor-exemplo'],</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; template: <br> 
+                        &nbsp; &nbsp; &lt;ul&gt;<br>
+                        &nbsp; &nbsp; &nbsp; &lt;li *ngFor ="let exemplo of nome"&gt; {{ '{' }} exemplo.nome {{ '}' }} &lt;/li&gt; 
+                        <br> 
+                        &nbsp; &nbsp; &lt;/ul&gt;</p>
+                    <p class="text-codigo">{{ '}' }})</p>
+                    <p class="text-codigo">export class TesteModule 
+                        {{ '{' }} 
+                            nome: any[] = ['Alessandra', 'Gabriele']
+                        {{ '}' }}</p>
+                        
+                </div>
+                <p class="pt-3 text-justify">E o resultado será:</p>
+                <div class="codigo-branco">
+                    <p class="text-branco"> 
+                        • Alessandra <br>
+                        • Gabriele
+                    </p>
+            
+                </div>
+
+        </div>
+
+       

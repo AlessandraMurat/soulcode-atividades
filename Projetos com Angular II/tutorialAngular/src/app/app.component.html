@@ -1,0 +1,107 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #035ccc">
+    <a class="navbar-brand" style="color: #ffffff; " [routerLink]="['/principal']">
+      <img src=";;/../../assets/images/5847ea22cef1014c0b5e4833.png" alt="" width="40" class="d-inline-block align-text-middle mr-1">
+     
+      {{title}}
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav pl-3">
+        <li class="nav-item"  >
+          <a class="nav-link" [routerLink]="['/principal']" style="color: #ffffff;">Início<span class="sr-only" >(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/instalacao']" style="color: #ffffff;">Instalação</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/documentacao']" style="color: #ffffff;">Documentação</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" style="color: #ffffff;">Contato</a>
+        </li>
+      </ul>
+
+      <form class="form-inline ml-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</header>
+
+
+<footer class="section bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Menu</h6>
+                        <ul class="list-unstyled footer-link mt-2">
+                            <li><a [routerLink]="['/principal']">Início</a></li>
+                            <li><a [routerLink]="['/instalacao']">Instalação</a></li>
+                            <li><a [routerLink]="['/documentacao']">Documentação</a></li>
+                            <li><a href="">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Assuntos</h6>
+                        <ul class="list-unstyled footer-link mt-2">
+                            <li><a [routerLink]="['/componentes']">Componentes </a></li>
+                            <li><a [routerLink]="['/modulos']">Módulos</a></li>
+                            <li><a [routerLink]="['/databinding']">Data Binding</a></li>
+                            <li><a [routerLink]="['/rotas']">Rotas</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Ajuda</h6>
+                        <ul class="list-unstyled footer-link mt-2">
+                            <li><a href="">Cadastrar </a></li>
+                            <li><a href="">Entrar</a></li>
+                            <li><a href="">Termos de Serviço</a></li>
+                            <li><a href="">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Contato</h6>
+                        <p class="contact-info mt-4" style="font-size: 1em;">Entre em contato caso precise de ajuda</p>
+                        <div class="mt-2">
+                            <ul class="lista-contato">
+                                <li class="lista-contato-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
+                                <li class="lista-contato-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></a></li>
+                                <li class="lista-contato-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></a></li>
+                                <li class="lista-contato-item"><a href="#"><i class="fab instagram footer-social-icon fa-instagram"></i></a></li>
+                                <li class="lista-contato-item"><a href="#"><i class="fab youtube footer-social-icon fa-youtube"></i></a></li>
+                               
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-5" >
+            <a href="https://www.linkedin.com/in/alessandramurat/" class="footer-alt mb-0 f-14" style="text-decoration: none;">2021 © Alessandra Murat</a>
+        </div>
+    </footer>
+

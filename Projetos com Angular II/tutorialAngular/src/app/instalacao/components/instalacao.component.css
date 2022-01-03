@@ -1,0 +1,87 @@
+
+
+* {
+    font-family: 'Poppins', sans-serif ;
+}
+
+
+.codigo {
+    padding: 15px 0px 5px 25px;
+    border-radius: 10px;
+    background: #263238 !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+}
+
+.text-codigo {
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: white;
+}
+
+.span-codigo {
+    font-family: Arial, Helvetica, sans-serif !important;
+   color: #999;
+}
+
+.rotate_01{
+
+    height: 30vh;
+  
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 5s linear infinite;
+    animation: spin 1.2s linear infinite;
+}
+
+/*use keyframes*/
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    50%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+.rotate_02{
+
+    height: 25vh;
+    transform: rotate(85deg);
+    margin-top: -95px;
+    margin-left: -18px;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1.2s linear infinite;
+
+}
+
+/*use keyframes*/
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(340deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(34deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(340deg);}
+}
+   
+@media (max-width: 600px)
+{
+  .rotate_01 {
+    margin-top: 85px;
+
+  }
+  .rotate_02 {
+    margin-top: -10px;
+
+  }
+}
+
+
+
+
+
+
+
+

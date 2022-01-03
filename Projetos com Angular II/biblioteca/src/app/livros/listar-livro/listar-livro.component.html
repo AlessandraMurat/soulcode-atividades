@@ -1,0 +1,54 @@
+<section class="container" >
+    <div class="row">
+        <div class="col">
+            <div class="row mt-5">
+                <div class="col-6" id="corpo">
+                    <h1>Acervo de Livros</h1>
+                </div>
+                <div class="col-6">
+                   
+                    <button class="btn" [routerLink]="['/livros/cadastrar-livro']" style="background-color: rgb(86, 226, 43);">Cadastrar Livros</button>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered" id="myTable">
+                <thead style="background-color: rgb(211, 164, 255);">
+                    <tr class="text-center">
+                        <th>Id</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Ano de Publicação</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+
+                    <tr *ngFor="let livro of livros">
+                        <td> {{ livro.id }} </td>
+                        <td> {{ livro.titulo }}</td>
+                        <td> {{ livro.autor }}</td>
+                        <td> {{ livro.ano }}</td>
+                        <td >
+                            <a class="btn btn-warning mr-2" [routerLink] = "['/livros/editar-livro', livro.id]">Editar</a>
+                            <a class="btn btn-dark mr-2" class="btn btn-xs btn-danger" (click)="remover($event, livro)" >Deletar</a>
+                           
+                        </td>
+                      </tr>
+                </tbody>
+            </table>
+
+            <p *ngIf="livros.length==0" class="text-center">Nenhuma tarefa cadastrada.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+

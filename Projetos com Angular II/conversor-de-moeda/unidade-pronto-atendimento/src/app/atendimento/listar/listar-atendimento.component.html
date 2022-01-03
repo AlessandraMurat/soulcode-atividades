@@ -1,0 +1,38 @@
+<h1>Atendimento</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <tbody>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Cartão Sus </th>
+      <th>Status de Atendimento</th>
+      <th>Ativo</th>
+      <th class="text-center">
+        <a class="btn btn-xs btn-success" [routerLink] = "['/atendimento/cadastrar']" >
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo
+        </a>
+      </th>
+    </tr>
+    <tr *ngFor="let atendimento of atendimentos">
+      <td>{{atendimento.id}}</td>
+      <td>{{atendimento.nome}}</td>
+      <td>{{atendimento.cartaoSus}}</td>
+      <td>{{atendimento.status}}</td>
+      
+      <td style="width: 70px" class="text-center">
+        <input type="checkbox">
+      </td>
+      <td class="text-center" style="width: 200px">
+        <a title="Editar" alt="Editar" class="btn btn-xs btn-info" [routerLink] = "['/atendimento/editar', atendimento.id]">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
+        </a>
+        <a href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remover
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="atendimentos.length==0" class="text-center">Nenhuma atendimento cadastrada.</p>

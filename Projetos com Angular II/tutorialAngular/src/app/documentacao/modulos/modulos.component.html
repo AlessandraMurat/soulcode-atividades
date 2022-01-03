@@ -1,0 +1,127 @@
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">O que são módulos ?</h2>
+            <p class="pl-4 identa">
+                Um módulo é um conjunto de de componentes, diretivas, serviços, entre outros qque dependem da sua necessidade, podendo uma aplicação ter vários módulos. Como vimos na introdução com praticidade criamos um módulo pelo comando de linha (ng generate module [nome]).
+            </p>
+            <p class="pl-4 identa">
+                Para definir um módulom usamos um decorator de class @NgModule, esse decorator usa um objeto de metadados com propriedades que definem o módulo, abaixo temos as principais:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    <b>Declarations: </b> Recebe um array de componentes, diretivas e pipes que fazem parte do módulo;
+                </li>
+                
+                <li>
+                    <b>Imports: </b>Array com outros módulos que são necessários por componentes declarados nesse módulo;
+                </li>
+               
+                <li>
+                    <b>Exports:</b>  Define o conjunto de declarações(componentes, pipes etc) que ficam disponíveis para outros módulos;
+                <li>
+                    <b>Providers: </b> Declara os serviços, se for o módulo root, os serviços ficam disponíveis para toda a aplicação.
+                </li>
+            </ul>
+
+            <div class="col-lg-6 pl-4 pt-3">
+                    
+                    <div class="codigo">
+                        <p class="text-codigo"> import {{ '{' }} BrowserModule {{ '}' }} from '@angular/platform-browser';</p>
+                        <p class="text-codigo"> import {{ '{' }} NgModule{{ '}' }} from '@angular/core';</p>
+
+
+                        <p class="text-codigo"> @NgModule ({{ '{' }}</p>
+                        <p class="text-codigo"> &nbsp; &nbsp; imports:[ AppComponent ],</p>
+                        <p class="text-codigo"> &nbsp; &nbsp; declarations:[ BrowserModule ],</p>
+                        <p class="text-codigo"> &nbsp; &nbsp; providers:[],</p>
+                        <p class="text-codigo"> &nbsp; &nbsp; bootstrap:[ AppComponent ]</p>
+                        <p class="text-codigo">{{ '}' }})</p>
+                        <p class="text-codigo">export class AppModule {{ '{' }} {{ '}' }}</p>
+                            
+                    </div>
+
+                    
+
+
+            
+
+        </div>
+        <div class="text-justify pl-4 pt-3">
+                        
+            <p>
+                Na demonstração acima tornamos a classe AppModule em um módulo Angular ao aplicar o decorator @NgModule.
+            </p>
+        </div>

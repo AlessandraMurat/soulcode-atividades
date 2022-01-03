@@ -1,0 +1,61 @@
+<h1>Cadastrar tarefa</h1>
+
+<div class="well">
+  <form #formAtendimento="ngForm">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" id="id" name="id" [(ngModel)]="atendimento.id" #id="ngModel" minlength="2"
+        required>
+      <div *ngIf="id.errors && (id.dirty || id.touched)" class="alert alert-danger">
+        <div [hidden]="!id.errors.required">
+          Digite o id.
+        </div>
+        <div [hidden]="!id.errors.minlength">
+          O id deve conter ao menos 2 caracteres.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="atendimento.nome" #nome="ngModel"
+        minlength="3" required>
+      <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+        <div [hidden]="!nome.errors.required">
+          Digite o nome do paciente.
+        </div>
+        <div [hidden]="!nome.errors.minlength">
+          O nome deve conter ao menos 3 caracteres.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cartao">Cartao</label>
+      <input type="number" class="form-control" id="cartao" name="cartao" [(ngModel)]="atendimento.cartaoSus"
+        #cartao="ngModel" minlength="7" maxlength="7" required>
+      <div *ngIf="cartao.errors && (cartao.dirty || cartao.touched)" class="alert alert-danger">
+        <div [hidden]="!cartao.errors.required">
+          Digite o Cartao SUS do paciente.
+        </div>
+        <div [hidden]="!cartao.errors.minlength && !cartao.errors.maxlength">
+          O numro do cartao deve conter 7 caracteres.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Prioridade</label>
+      <select name="status" id="status" [(ngModel)]="atendimento.status" #status="ngModel">
+        <option value="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+    </div>
+
+    <div class="form-group text-center">
+      <input type="submit" class="btn btn-success" (click)="cadastrar()" value="Cadastrar"
+        [disabled]="!formAtendimento.form.valid">
+      <a class="btn btn-default" [routerLink]="['/atendimento']">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Voltar
+      </a>
+    </div>
+  </form>
+</div>

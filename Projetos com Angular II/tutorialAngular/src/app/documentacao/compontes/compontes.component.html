@@ -1,0 +1,154 @@
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a [routerLink]="['/modulos']">Módulos</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/componentes']">Componentes</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/diretivas']">Diretivas</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a [routerLink]="['/databinding']">Data Binding</a>
+            </li>
+
+            <li>
+                <a [routerLink]="['/pipes']">Pipes</a>
+            </li>
+            <li>
+                <a [routerLink]="['/rotas']">Rotas</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">O que são Componentes ?</h2>
+            <p class="pl-4 identa">
+                Os componentes são os principais blocos de construção das aplicações angulares. Cada componente inclui:
+            </p>
+ 
+            <ul class="lista-n-angular">
+
+                <li>
+                    Um modelo HTML que renderiza o conteúdo da página;
+                </li>
+
+                <li>
+                    Uma classe Typescrip que define o comotamento;
+                </li>
+
+                <li>
+                    Um seletor CSS que declara como como o componente é usado no modelo;
+                <li>
+                    Em opcional temos styles CSS que podem ser aplicados no modelo;
+                </li>
+            </ul>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Dividindo o componente em duas partes</h2>
+            <p class="pl-4 identa">
+                A primeira parte é Metadata que são definições que precisamos informar ao Angular que a nossa classe é
+                um component, através de um decorator, no caso do component usamos o @Component.
+            </p>
+            <p class="pl-4 identa">
+                A segunda parte é a classe, assim como outras lingaugens de programação que utiliza orientação a objeto
+                , possui métodos e propriedades que serão listadas abaixo:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    <b> Selector: </b> Responsável pela identificação do componente, o mesmo pode ser adicionado em um
+                    documento HTML
+                </li>
+
+                <li>
+                    <b> TemplateUrl: </b> Conhecido como o nome do documento HTML que será a parte visual do componente.
+                    Nesta propriedade podemos inserir o código em HTML, juntamente com as diretivas e bindings
+                    necessários para exibição do componente no navegador.
+                </li>
+
+                <li>
+                    <b> Template: </b> Outra alternativa para descrever a parte visual do componente.
+
+                </li>
+                <li>
+                    <b> StyleUrl: </b> Aqui informamos a folha de estilo que compõem o componente
+                </li>
+            </ul>
+            <p class="pl-4">
+                Portanto a estrutura de um componente deve ser formada por pelo menos 3 elementos, sendo eles o HTML,
+                CSS e Typescript. Lembrando que os mesmos são organizados em arquivos se sepaardos e juntados através do
+                decorator @Component.
+            </p>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Criando um componente através do CLI</h2>
+            <p class="pl-4">Para a criação de um novo componente é importante já ter criado um projeto com o comando ng new, e acessar o repositório que foi criado, após isso podemos executar o comando a seguir:</p>
+            <div class="col-lg-7 pl-4">
+               
+
+                <div class="codigo">
+                    <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate component [nome do projeto]/[nome do componente]</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
