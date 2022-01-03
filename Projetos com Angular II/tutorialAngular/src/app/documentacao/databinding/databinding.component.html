@@ -1,0 +1,146 @@
+
+
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank" class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">Data binding</h2>
+            <p class="pl-4 ">
+                É a maneira de fazer vinculações entre componentes e o template, deste modo podemos dizer que a vinculção de dados é passada de um componente para o template e vice-versa.
+            </p>
+            <p class="pl-4">
+                Temos quatro tipos de data binding, sendo eles a interpolation, property binding, event binding e two way data binding 
+            </p>
+         
+            
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Interpolation</h2>
+            <p class="pl-4 text-justify">Permite incorporar valores de string dinâmicos em seu HTML. Use a interpolação para alterar o que aparece na visualização como a exbição do resultado de uma expressão</p>
+            <p class="pl-4 text-justify">Interpolação refere-se a inclusao de expressões em texto marcado, por padrão usa-se chaves duplas {{ '{' }}{{ '{' }}{{ '}' }}{{ '}' }} como demilitadores. NO exemplo abaixo iremos mostrar o resultado de 5*3</p>
+            
+            <div class="col-lg-7 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo">&lt;p&gt; O resultado de 5*3 é: {{ '{' }}{{ '{' }} 5*3:{{ '}' }}{{ '}' }}  &lt;/p&gt; </p>
+
+                </div>
+                <p class="pt-3 text-justify">E o resultado será:</p>
+
+                <div class="codigo-branco">
+                    <p class="text-branco"> 
+                        O resultado de 5*3 é: 15
+                    </p>
+                </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Property Binding</h2>
+            <p class="pl-4 text-justify">Os atributos de vinculação no Angular podem ajudá-lo a definir valores para atributos de elemento ou diretivas HTML. Use a associação de propriedade para realizar coisas como alternar funções de botão, definir caminhos de forma programática e compartilhar valores entre componentes.</p>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Event Binding</h2>
+            <p class="pl-4 text-justify">
+                A correlação de eventos permite que você ouça e responda às ações do usuário, como pressionamentos de tecla, movimentos do mouse e cliques</p>
+            <p class="pl-4 text-justify">
+                Para vincular a eventos, use a sintaxe de vinculação de evento Angular. Essa sintaxe consiste no nome do evento de destino entre parênteses no lado esquerdo do sinal de igual e na instrução do modelo entre aspas à direita. No exemplo a seguir, o nome do evento de destino é click e a instrução do template é Salvar().
+            </p>
+            <div class="col-lg-7 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo">&lt;button&gt; (click)= "Salver()" &lt;/button&gt; </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Two Way Data Binding</h2>
+            <p class="pl-4 text-justify">
+                A vinculação bidirecional fornece uma maneira para os componentes do seu aplicativo compartilharem dados. Use a vinculação bidirecional para monitorar eventos e atualizar valores ao mesmo tempo entre os componentes.</p>
+
+        </div>

@@ -1,0 +1,147 @@
+
+
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">O que são pipes ?</h2>
+            <p class="pl-4 identa">
+                Pipe é a forma mais elegante que podemos alterar strings, valores monetários, datas para exibição. Pipes são funções simples que aceitam um valor de entrada e retorna uma sa´da editada. A vantagem de pipes é que pode ser usada em toda aplicação , enquanto declara cada pipe uma única vez. Abaixo veremos os tipos de pipes que já estão integrados ao Angular:
+            </p>
+            <ul class="lista-n-angular">
+
+                <li>
+                    <b> DatePipe: </b> Edita um valor de data de acordo com as regras locais.
+                </li>
+
+                <li>
+                    <b> UpperCasePipe: </b> Transforma o texto em letras maiúscula;
+                </li>
+
+                <li>
+                    <b> LowerCasePipe: </b> Transforma o texto em letras minúscula;
+
+                </li>
+                <li>
+                    <b> CurrencyPipe: </b> Transforma  um número em string de moeda;
+                </li>
+                <li>
+                    <b> DecimalPipe: </b> Transforma um número inteiro em uma string com um ponto decimal;
+                </li>
+                <li>
+                    <b> PercentPipe: </b> Transforma um número em uma string de porcentagem;
+                </li>
+                <li>
+                    <b> SlicePipe: </b> Cria um novo Array ou String contendo um subconjunto dos elementos.
+                </li>
+                
+            </ul>
+            
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Aplicando pipe em um elemento</h2>
+            <p class="pl-4 text-justify">Para usar um pipe usamos o operador de pipe (|) em uma expressão de um modelo. A seguir iremos usar um modelo com o nome de caixaAlta que receberá uma string no arquivo <b>teste.component.ts</b></p>
+            <div class="col-lg-7 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo"> import {{ '{' }} Component{{ '}' }} from '@angular/core';</p>
+  
+
+                    <p class="text-codigo"> @NgComponent({{ '{' }}</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; selector:['app-teste'],</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; template: ['./teste.coponent.html']</p>
+                    <p class="text-codigo">{{ '}' }})</p>
+                    <p class="text-codigo">export class TesteModule 
+                        {{ '{' }} 
+                            caixaAlta: 'Testando caixa alta'
+                        {{ '}' }}</p>
+                        
+                </div>
+                <p class="pt-3 text-justify">No arquivo <b>teste.component.html</b> vamos inserir uma tag p e inserir o pipe </p>
+                <div class="codigo">
+                    <p class="text-codigo"> &lt;p&gt; Teste {{ '{' }} caixaAlta | uppercase {{ '}' }} &lt;/p&gt;
+            
+                </div>
+                <p class="pt-3 text-justify">E o resultado será:</p>
+                <div class="codigo-branco">
+                    <p class="text-branco"> 
+                        TESTANDO CAIXA ALTA
+                    </p>
+            
+                </div>
+
+        </div>

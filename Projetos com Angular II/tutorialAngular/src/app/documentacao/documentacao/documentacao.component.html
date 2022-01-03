@@ -1,0 +1,174 @@
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">Como funciona o angular ?</h2>
+            <p class="pl-4 identa">O angular CLI é o responsável pela criação de toda a estrutura que sera usada na
+                craição da
+                nossa aplicação, com diretórios, arquivos e scripts que serão utilizados no projeto. Vale lembrar que
+                esses arquivos também podem ser criados manualmente. o Angular inclui:
+            </p>
+            <ul class="lista-n-angular">
+                <li>
+                    Estrutura embasada em componentes para a elaboração de aplicativos da web escaláveis;
+                </li>
+                <li>
+                    Um acervo de bibliotecas integradas que cobrem uma grande diversificação de recursos, que estão
+                    inclusos o roteamento, gerenciamento de formulários, comunicação cliente/servidor, entre outras
+                    funcionalidades;
+                </li>
+                <li>
+                    Ferramentas poderosas que auxilia a desenvolver, construir, testar atualizar e otimizar seu código.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="line"></div>
+
+            <div class="row pb-2" style="padding-left: 2.5em;">
+                <h2>Guia de comandos Angular CLI</h2>
+            </div>
+            <div class="row pl-4">
+                <div class="col-lg-6 sm-margin-30px-bottom xs-margin-25px-bottom">
+                    
+
+                        <p class="text-justify">Ao explorar o Angular podemos encontrar muitos comandos que nos auxiliam na
+                            produtividade e deixa a construção da nossa aplicação mais interessante, desta forma, veja alguns exemplos abaixo:</p>
+
+
+                            <p class="text-justify text-comando">1. Para criar um novo projeto:</p>
+
+                            <div class="codigo">
+                                <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng new [nome do seu projeto]</p>
+                            </div>
+    
+                           
+                            
+                        <p class="text-justify text-comando pt-3">2. Para executar a aplicação, esta tem com padrão executar na porta 4200:</p>
+
+                        <div class="codigo">
+                            <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng serve</p>
+                        </div>
+
+                        <p class="text-justify pt-3"> Há algumas opções para complementar este comando:</p>
+
+                        <p class="text-justify text-comando">2.1 Executar e abrir no seu navegador padrão</p>
+                        <div class="codigo">
+                            <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng serve --open</p>
+                        </div>
+
+                        <p class="text-justify text-comando pt-3">2.2 Executar em uma porta diferente da padrão </p>
+                        <div class="codigo mt-3">
+                            <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng serve --port:3000</p>
+                        </div>
+
+                   
+                </div>
+                <div class="col-lg-6 sm-margin-30px-bottom xs-margin-25px-bottom">
+                    
+      
+                    <p class="text-justify text-comando">3. Gerar esquemas para nossa aplicação</p>
+
+                    <div class="codigo">
+                        <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate [esquema] [nome]</p>
+                    </div>
+
+                    <p class="text-justify pt-3"> Algumas opções de comandos:</p>
+
+                    <p class="text-justify text-comando">3.1 Criar componente </p>
+                    <div class="codigo">
+                        <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate component [nome]</p>
+                    </div>
+
+                    <p class="text-justify text-comando pt-3">3.2 Criar módulo </p>
+                    <div class="codigo mt-3">
+                        <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp;  ng generate module [nome]</p>
+                    </div>
+
+                    <p class="text-justify text-comando pt-3">3.3 Criar diretivas </p>
+                    <div class="codigo mt-3">
+                        <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate directive [nome]</p>
+                    </div>
+                    <p class="text-justify text-comando pt-3">3.4 Criar serviços </p>
+                    <div class="codigo mt-3">
+                        <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate service [nome]</p>
+                    </div>
+               
+            </div>
+
+
+
+            </div>
+

@@ -1,0 +1,115 @@
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">O que é injeção de dependência ?</h2>
+            <p class="pl-4 identa">
+                São serviços ou objetos que uma classe necessita para realizar sua função, a injeção de deped~encia(DI) é um modelo de desingn  no qual uma classe solicita depedências de fontes externas para que não precise criá-las.
+            </p>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Criando um serviço</h2>
+            <p class="pl-4">Para a criação de um serviço usamos o comando abaixo:</p>
+            <div class="col-lg-6 pl-4">
+               
+
+                <div class="codigo">
+                    <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; ng generate service [nome do projeto]/[service]</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Serviços de injeção</h2>
+            <p class="pl-4 ">
+                A injeção de serviço tem como resultado torná-los disponíveis para os componentes.
+            </p>
+            <p class="pl-4 ">
+                Para injetar uam dependência em um componente, passamos para o constructor como argumento o tipo de depedência. Abaixo exemplificando temos que exemploService é do tipo ExemploService(Serviço criado através do ng generate service).
+            </p>
+            <div class="col-lg-6 pl-4">
+               
+
+                <div class="codigo">
+                    <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp; constructor(exemploService: ExemploService)</p>
+                </div>
+            </div>
+
+        </div>

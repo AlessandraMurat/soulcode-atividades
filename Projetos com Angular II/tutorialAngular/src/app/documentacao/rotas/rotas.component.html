@@ -1,0 +1,141 @@
+
+
+<div class="wrapper">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Aprendendo Angular</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a [routerLink]="['/documentacao']">Início</a>
+            </li>
+
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entendendo
+                    Angular</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a [routerLink]="['/modulos']">Módulos</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/componentes']">Componentes</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/injecao']">Injeção de Dependências</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/diretivas']">Diretivas</a>
+                        </li>
+                    </ul>
+    
+                </li>
+                <li>
+                    <a [routerLink]="['/databinding']">Data Binding</a>
+                </li>
+    
+                <li>
+                    <a [routerLink]="['/pipes']">Pipes</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/rotas']">Rotas</a>
+                </li>
+            </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="../../../assets/Angular.pdf" target="_blank"  class="download">Download Material</a>
+            </li>
+            <li>
+                <a href="#" class="article">Retornar a página inicial</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span id="texto" class="pl-3">Menu Lateral</span>
+                </button>
+
+
+            </div>
+
+        </nav>
+
+
+        <div class="text-justify">
+            <h2 class="pl-4">Rotas e navegação com Angular</h2>
+            <p class="pl-4 identa">
+                Mais uma praticidade que o Angular nos proporciona é o esquema de rotas que como outras coisas sao modularizadas, com as rotas não é diferente. Para ter rotas em nossa aplicação basta criarmos um arquivo de rotas que geralmente tem o seguinte nome: <b>app-routing.module.ts</b> e sua estrutura consiste em:
+            </p>
+            <div class="col-lg-6 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo"> import {{ '{' }} BrowserModule {{ '}' }} from '@angular/platform-browser';</p>
+                    <p class="text-codigo"> import {{ '{' }} Routes, RouterModule {{ '}' }} from '@angular/router';</p>
+
+                    <p class="text-codigo"> const routes: Routes = [];</p> <br>
+
+                    <p class="text-codigo"> @NgModule ({{ '{' }}</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; imports:[RouterModule.forRoot.(routes)],</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; exports:[ RouterModule ]</p>
+                    <p class="text-codigo">{{ '}' }})</p>
+                    <p class="text-codigo">export class AppRoutingModule {{ '{' }} {{ '}' }}</p>
+                        
+                </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div >
+            <h2 class="pl-4">Compondo as rotas</h2>
+            <p class="pl-4 text-justify">As rotas são definidas por dois elementos, os quais sao o path e o componente, que é o componente que queremos visualizar.</p>
+            <div class="col-lg-7 pl-4 pt-3">
+                    
+                <div class="codigo">
+                    <p class="text-codigo"> import {{ '{' }} BrowserModule {{ '}' }} from '@angular/platform-browser';</p>
+                    <p class="text-codigo"> import {{ '{' }} Routes, RouterModule {{ '}' }} from '@angular/router';</p>
+                    <p class="text-codigo"> import {{'{'}} ExemploComponent {{ '}' }} from './exemplo/exemplo.component';</p>
+
+                    <p class="text-codigo"> const routes: Routes = [{{ '{' }} path:'exemplo', component: ExemploComponent {{ '}' }}];</p> <br>
+
+                    <p class="text-codigo"> @NgModule ({{ '{' }}</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; imports:[RouterModule.forRoot.(routes)],</p>
+                    <p class="text-codigo"> &nbsp; &nbsp; exports:[ RouterModule ]</p>
+                    <p class="text-codigo">{{ '}' }})</p>
+                    <p class="text-codigo">export class AppRoutingModule {{ '{' }} {{ '}' }}</p>
+                        
+                </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="text-justify">
+            <h2 class="pl-4">Navegando via HTML</h2>
+            <p class="pl-4 ">
+                Ao tentar navegar pelas páginas pelas rotas, o Angular não irá conseguir encontrar onde ele deveria renderizar o componente, para isto é preciso inserir uma tag no arquivo <b>app.component.html, ressaltando que é nesse arquivo que ficará o conteúdo que queremos mostrar em todas as páginas, como exemplo temos o footer e o header.</b>.
+            </p>
+            <p class="pl-4 ">
+                Para a navegação é primordial esquecer de usar o href padrão do HTML para links de páginas, pois ela irá recarregar a página e voltará para a tela inicial. Ao inv´s disso, iremos substituir pelo routerLink do Angular, que fará com que apenas os componentes sejam redenrizados na tela. Desta forma, você precisa substituir o href pelo código a seguir para navegar nas páginas HTML.
+            </p>
+            <div class="col-lg-6 pl-4">
+               
+
+                <div class="codigo">
+                    <p class="text-codigo"> <span class="span-codigo">1</span> &nbsp; | &nbsp;  [routerLink]="/exemplo"</p>
+                </div>
+            </div>
+
+        </div>
